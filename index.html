@@ -3,18 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f7f4">
+  <meta name="description" content="Discover everyday essentials, handpicked deals and helpful shopping support at Bazaar.">
   <title>Bazaar – Online shopping for everyday needs</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="announcement">A little something for your everyday <span>Free delivery on orders over ₹499</span></div>
   <header class="top">
-    <a class="brand" href="/">Bazaar</a>
+    <a class="brand" href="/" aria-label="Bazaar home"><span class="brand-mark">b.</span>Bazaar</a>
     <form class="search" id="searchForm" role="search">
       <label class="sr" for="search">Search products</label>
       <input id="search" type="search" placeholder="Search for phones, shoes, books and more">
       <button type="submit">Search</button>
     </form>
-    <button id="cartBtn" class="cart-btn" type="button">Cart <span id="cartCount" class="count">0</span></button>
+    <button id="cartBtn" class="cart-btn" type="button"><span aria-hidden="true">🛍</span> Cart <span id="cartCount" class="count">0</span></button>
   </header>
   <nav id="cats" class="cats" aria-label="Categories"></nav>
 

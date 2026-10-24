@@ -1,22 +1,21 @@
-// Put photos in the img folder. If a photo is missing, the emoji shows instead.
 const PRODUCTS = [
-  { id:1, name:"Wireless Earbuds", cat:"Electronics", price:1499, mrp:2999, rating:4.3, emoji:"🎧", image:"img/earbuds.jpg", color:"#d8ecf5", desc:"Bluetooth 5.3, 24-hour battery with charging case." },
-  { id:2, name:"Smartwatch Fit", cat:"Electronics", price:2799, mrp:5999, rating:4.1, emoji:"⌚", image:"img/smartwatch.jpg", color:"#e4dcf3", desc:"1.7-inch display, heart-rate and sleep tracking." },
-  { id:3, name:"Power Bank 20000 mAh", cat:"Electronics", price:1299, mrp:2199, rating:4.4, emoji:"🔋", image:"img/powerbank.jpg", color:"#f7e6b8", desc:"Fast charging, two USB ports and one Type-C." },
-  { id:4, name:"Running Shoes", cat:"Fashion", price:1899, mrp:3499, rating:4.2, emoji:"👟", image:"img/shoes.jpg", color:"#fbd9cf", desc:"Lightweight mesh upper with cushioned sole." },
-  { id:5, name:"Cotton Casual Shirt", cat:"Fashion", price:699, mrp:1499, rating:3.9, emoji:"👕", image:"img/shirt.jpg", color:"#d5ead9", desc:"Regular fit, breathable 100% cotton." },
-  { id:6, name:"Backpack 30 L", cat:"Fashion", price:999, mrp:1999, rating:4.5, emoji:"🎒", image:"img/backpack.jpg", color:"#cfe3e0", desc:"Water-resistant with a padded laptop sleeve." },
-  { id:7, name:"Non-stick Cookware Set", cat:"Home", price:1599, mrp:3200, rating:4.0, emoji:"🍳", image:"img/cookware.jpg", color:"#f3dcc6", desc:"Three-piece set, works on gas and induction." },
-  { id:8, name:"LED Desk Lamp", cat:"Home", price:549, mrp:999, rating:4.2, emoji:"💡", image:"img/lamp.jpg", color:"#fff0b8", desc:"Three brightness levels, USB powered." },
-  { id:9, name:"Cotton Bedsheet Set", cat:"Home", price:799, mrp:1799, rating:4.1, emoji:"🛏️", image:"img/bedsheet.jpg", color:"#e0e6f5", desc:"Double bed sheet with two pillow covers." },
-  { id:10, name:"Face Wash 150 ml", cat:"Beauty", price:249, mrp:399, rating:4.3, emoji:"🧴", image:"img/facewash.jpg", color:"#d9f0e6", desc:"Gentle daily cleanser for all skin types." },
-  { id:11, name:"Habit Building Handbook", cat:"Books", price:299, mrp:499, rating:4.6, emoji:"📘", image:"img/book.jpg", color:"#d6e2f7", desc:"Paperback guide to small habits that stick." },
-  { id:12, name:"Ruled Notebook Pack of 5", cat:"Books", price:349, mrp:550, rating:4.4, emoji:"📓", image:"img/notebook.jpg", color:"#f3d6dd", desc:"A5 size, 180 pages each, sturdy cover." }
+  { id:1, name:"Wireless Earbuds", cat:"Electronics", price:1499, mrp:2999, rating:4.3, emoji:"🎧", image:"https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?auto=format&fit=crop&w=900&q=85", color:"#d8ecf5", desc:"Bluetooth 5.3, 24-hour battery with charging case." },
+  { id:2, name:"Smartwatch Fit", cat:"Electronics", price:2799, mrp:5999, rating:4.1, emoji:"⌚", image:"https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=85", color:"#e4dcf3", desc:"1.7-inch display, heart-rate and sleep tracking." },
+  { id:3, name:"Power Bank 20000 mAh", cat:"Electronics", price:1299, mrp:2199, rating:4.4, emoji:"🔋", image:"https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?auto=format&fit=crop&w=900&q=85", color:"#f7e6b8", desc:"Fast charging, two USB ports and one Type-C." },
+  { id:4, name:"Running Shoes", cat:"Fashion", price:1899, mrp:3499, rating:4.2, emoji:"👟", image:"https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=85", color:"#fbd9cf", desc:"Lightweight mesh upper with cushioned sole." },
+  { id:5, name:"Cotton Casual Shirt", cat:"Fashion", price:699, mrp:1499, rating:3.9, emoji:"👕", image:"https://images.unsplash.com/photo-1598033129183-c4f50c736f10?auto=format&fit=crop&w=900&q=85", color:"#d5ead9", desc:"Regular fit, breathable 100% cotton." },
+  { id:6, name:"Backpack 30 L", cat:"Fashion", price:999, mrp:1999, rating:4.5, emoji:"🎒", image:"https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=900&q=85", color:"#cfe3e0", desc:"Water-resistant with a padded laptop sleeve." },
+  { id:7, name:"Non-stick Cookware Set", cat:"Home", price:1599, mrp:3200, rating:4.0, emoji:"🍳", image:"https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=900&q=85", color:"#f3dcc6", desc:"Three-piece set, works on gas and induction." },
+  { id:8, name:"LED Desk Lamp", cat:"Home", price:549, mrp:999, rating:4.2, emoji:"💡", image:"https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=900&q=85", color:"#fff0b8", desc:"Three brightness levels, USB powered." },
+  { id:9, name:"Cotton Bedsheet Set", cat:"Home", price:799, mrp:1799, rating:4.1, emoji:"🛏️", image:"https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=900&q=85", color:"#e0e6f5", desc:"Double bed sheet with two pillow covers." },
+  { id:10, name:"Face Wash 150 ml", cat:"Beauty", price:249, mrp:399, rating:4.3, emoji:"🧴", image:"https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?auto=format&fit=crop&w=900&q=85", color:"#d9f0e6", desc:"Gentle daily cleanser for all skin types." },
+  { id:11, name:"Habit Building Handbook", cat:"Books", price:299, mrp:499, rating:4.6, emoji:"📘", image:"https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=900&q=85", color:"#d6e2f7", desc:"Paperback guide to small habits that stick." },
+  { id:12, name:"Ruled Notebook Pack of 5", cat:"Books", price:349, mrp:550, rating:4.4, emoji:"📓", image:"https://images.unsplash.com/photo-1531346878377-a5be20888e57?auto=format&fit=crop&w=900&q=85", color:"#f3d6dd", desc:"A5 size, 180 pages each, sturdy cover." }
 ];
 const SLIDES = [
-  { h:"Big savings on electronics", p:"Earbuds, watches and power banks at up to 50% off.", cat:"Electronics", bg:"linear-gradient(120deg,#4A22D9,#8b4dff)" },
-  { h:"Step into the new season", p:"Shoes, shirts and bags for every day.", cat:"Fashion", bg:"linear-gradient(120deg,#E6246E,#ff7a59)" },
-  { h:"Make your home feel new", p:"Kitchen and bedroom essentials under ₹2,000.", cat:"Home", bg:"linear-gradient(120deg,#0e8a7d,#2bc4a0)" }
+  { h:"Good things. Better prices.", p:"Everyday tech that makes life a little easier.", cat:"Electronics", bg:"linear-gradient(90deg,rgba(19,31,29,.82),rgba(19,31,29,.08)),url('https://images.unsplash.com/photo-1498049794561-7780e7231661?auto=format&fit=crop&w=1800&q=90')" },
+  { h:"Find your everyday fit.", p:"Fresh picks to make getting dressed feel effortless.", cat:"Fashion", bg:"linear-gradient(90deg,rgba(19,31,29,.82),rgba(19,31,29,.08)),url('https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1800&q=90')" },
+  { h:"Make room for lovely.", p:"Thoughtful home finds for your favorite place.", cat:"Home", bg:"linear-gradient(90deg,rgba(19,31,29,.82),rgba(19,31,29,.08)),url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1800&q=90')" }
 ];
 const $ = id => document.getElementById(id);
 const inr = n => "₹" + n.toLocaleString("en-IN");
